@@ -12,11 +12,11 @@
 
 #include "push_swap.h"
 
-t_stack	*ft_init_node(t_stack *head, int num)
+t_node	*ft_init_node(t_node *head, int num)
 {
-	t_stack	*new_node;
+	t_node	*new_node;
 
-	new_node = malloc(sizeof(t_stack));
+	new_node = malloc(sizeof(t_node));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->data = num;
@@ -27,13 +27,13 @@ t_stack	*ft_init_node(t_stack *head, int num)
 
 int	main(int argc, char **argv)
 {
-	t_stack	*head;
+	t_stack	*a;
 	int	i;
 
 	i = argc - 1;
-	head = NULL;
+	a = NULL;
 	while (i > 0)
-		ft_init_node(head, ft_atoi(argv[i++]));
-	free(head);
+		ft_init_node(a, ft_atoi(argv[i++]));
+	free(a);
 	return (0);
 }

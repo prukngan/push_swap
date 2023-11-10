@@ -18,11 +18,13 @@
 # include <stdio.h>
 # include "libft/libft.h"
 
-typedef struct s_stack
+typedef struct s_node
 {
 	int				data;
-	struct s_stack	*next;
-}	t_stack;
+	struct s_node	*next;
+}	t_node;
+
+typedef t_node	t_stack;
 
 void	ft_swap(t_stack *top);
 void	ft_push(t_stack **s1, t_stack **s2);
